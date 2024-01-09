@@ -1,22 +1,23 @@
 import 'package:flutter/material.dart';
 
-class SignUp extends StatelessWidget {
-  const SignUp({super.key});
+class Login extends StatelessWidget {
+  const Login({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return ElevatedButton(
+    return OutlinedButton(
       onPressed: () {},
       style: ButtonStyle(
-          backgroundColor: const MaterialStatePropertyAll<Color>(Colors.white),
+          side: MaterialStateProperty.all<BorderSide>(
+              const BorderSide(color: Color.fromARGB(195, 192, 191, 191))),
           shape: MaterialStateProperty.all<OutlinedBorder>(
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(4)))),
       child: const Padding(
           padding: EdgeInsets.only(left: 50, right: 50),
           child: Text(
-            'Sign Up',
-            style:
-                TextStyle(color: Color.fromRGBO(230, 47, 23, 1), fontSize: 20),
+            'Log In',
+            style: TextStyle(
+                color: Color.fromARGB(195, 192, 191, 191), fontSize: 20),
           )),
     );
   }
